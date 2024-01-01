@@ -22,5 +22,6 @@ public class FindMembershipService implements FindMembershipUseCase {
 	public Membership find(FindMembershipCommand command) {
 		MembershipJpaEntity membershipJpaEntity = findMembershipPort.find(new Membership.MembershipId(command.getMembershipId()));
 		return membershipMapper.mapToDomainEntity(membershipJpaEntity);
+
 	}
 }
